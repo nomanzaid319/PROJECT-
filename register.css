@@ -27,13 +27,13 @@ section {
     background-repeat: no-repeat; */
     animation: animatebg 5s linear infinite;
 }
-/* @keyframes animatebg {
+@keyframes animatebg {
+    
 
     100% {
-        
         filter: hue-rotate(360deg);
     }
-} */
+}
 .login-box {
     position: absolute;
     width: 400px;

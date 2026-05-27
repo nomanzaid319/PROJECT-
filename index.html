@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
     <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
+    <!-- React and Babel CDNs for Dynamic Shopping Experience -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 
 <body>
@@ -24,20 +28,48 @@
 
         </ul>
         <!-- <a href=""><img src="images/Background_150x@2x.png" alt=""></a> -->
-        <a href=""
+        <!-- <a href=""
             style="position: absolute; right:8%; top: 15%;  height: 40px; width: 40px; background-image: url(images/magnifying-glass.png); background-position: center; background-repeat: no-repeat; background-size: contain;">
-        </a>
+        </a> -->
+
+        <a href="register-page.html" class="register-link" onclick="register()">SIGN UP</a>
+
+
+
         <!-- <a href=""
             style="position: absolute; right: 5%; top: 15%;  height: 40px; width: 40px; background-image: url(images/magnifying-glass.png); background-position: center; background-repeat: no-repeat; background-size: contain;">
         </a> -->
 
-        <button id="card-button">🛒</button>
+        <!-- <button id="card-button">🛒</button> -->
 
-        <a href=""
+        <!-- <a href=""
             style="position: absolute; right: 2%; top: 15%;  height: 40px; width: 40px; background-image: url(images/magnifying-glass.png); background-position: center; background-repeat: no-repeat; background-size: contain;">
-        </a>
+        </a> -->
+        <a href="loginpage.html" class="login-link" onclick="login()" >LOGIN</a>
 
     </nav>
+
+    
+    <!-- <nav class="navbar" id="navbar">
+
+        <ul>
+            <li>
+                <a href="about.html" id="product-link">Product</a>
+                <select aria-label="Product options" id="product-dropdown">
+                    <option value="Fire-Lens">Fire-Lens</option>
+                    <option value="Smartwatches">Smartwatches</option>
+                    <option value="Audio">Audio</option>
+                    <option value="Fitness Bands">Fitness Bands</option>
+                </select>
+            </li>
+            <li><a href="deals.html" id="deals-link">Deals</a></li>
+            <li><a href="more.html" id="more-links">More</a></li>
+
+            <a href="index.html" class="a"><img src="" alt=""></a>
+
+        </ul>
+
+    </nav> -->
 
 
     <!-- <script>
@@ -385,274 +417,8 @@
     </section>
 
 
-    <section class="six" id="six">
-        <div class="sixa" id="sixa">
-            <span>
-                Just
-
-                <span>
-                    Trending
-                </span>
-            </span>
-        </div>
-
-        <div class="sixb" id="sixb">
-            <div class="sixbone" id="sixbone">
-                <!-- From Uiverse.io by alexruix -->
-                <div class="card" id="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" id="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <script>
-                cartbutton = document.getElementById("card-button");
-                cartbutton.addEventListener("click", function () {
-                    cartbutton.style.backgroundColor = "green";
-                    cartbutton.style.borderColor = "green";
-                    cartbutton.innerHTML = "Added to Cart";
-                });
-
-            </script> -->
-
-
-            <div class="sixbtwo" id="sixbtwo">
-
-                <!-- From Uiverse.io by alexruix -->
-                <div class="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer" id="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- <script>
-                cartbutton = document.getElementById("card-button");
-                cartbutton.addEventListener("click", function () {
-                    cartbutton.style.backgroundColor = "green";
-                    cartbutton.style.borderColor = "green";
-                    cartbutton.innerHTML = "Added to Cart";
-                });
-
-            </script> -->
-            <div class="sixbthree" id="sixbthree">
-
-                <!-- From Uiverse.io by alexruix -->
-                <div class="card" id="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer" id="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" id="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sixbfour" id="sixbfour">
-
-                <!-- From Uiverse.io by alexruix -->
-                <div class="card" id="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer" id="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <button class="sixc" id="sixc">
-            <span>
-                view all
-            </span>
-        </button>
-    </section>
-
-
-    <section class="seven" id="seven">
-        <dvi class="sevena" id="sevena">
-            <span>
-                Boltt <span> Deals</span>
-            </span>
-        </dvi>
-
-        <div class="sevenb" id="sevenb">
-            <div class="sevenbone">
-                <div class="card" id="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer" id="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" id="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sevenbtwo" id="sevenbtwo">
-                <div class="card" id="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer" id="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" id="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sevenbthree" id="sevenbthree">
-                <div class="card" id="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer" id="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" id="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="sevenbfour" id="sevenbfour">
-                <div class="card" id="card">
-                    <div class="card-img" id="card-img"></div>
-                    <div class="card-info" id="card-info">
-                        <p class="text-title" id="text-title">Product title </p>
-                        <p class="text-body" id="text-body">Product description and details</p>
-                    </div>
-                    <div class="card-footer" id="card-footer">
-                        <span class="text-title" id="text-title">$499.49</span>
-                        <div class="card-button" id="card-button">
-                            <svg class="svg-icon" viewBox="0 0 20 20">
-                                <path
-                                    d="M17.72,5.011H8.026c-0.271,0-0.49,0.219-0.49,0.489c0,0.271,0.219,0.489,0.49,0.489h8.962l-1.979,4.773H6.763L4.935,5.343C4.926,5.316,4.897,5.309,4.884,5.286c-0.011-0.024,0-0.051-0.017-0.074C4.833,5.166,4.025,4.081,2.33,3.908C2.068,3.883,1.822,4.075,1.795,4.344C1.767,4.612,1.962,4.853,2.231,4.88c1.143,0.118,1.703,0.738,1.808,0.866l1.91,5.661c0.066,0.199,0.252,0.333,0.463,0.333h8.924c0.116,0,0.22-0.053,0.308-0.128c0.027-0.023,0.042-0.048,0.063-0.076c0.026-0.034,0.063-0.058,0.08-0.099l2.384-5.75c0.062-0.151,0.046-0.323-0.045-0.458C18.036,5.092,17.883,5.011,17.72,5.011z">
-                                </path>
-                                <path
-                                    d="M8.251,12.386c-1.023,0-1.856,0.834-1.856,1.856s0.833,1.853,1.856,1.853c1.021,0,1.853-0.83,1.853-1.853S9.273,12.386,8.251,12.386z M8.251,15.116c-0.484,0-0.877-0.393-0.877-0.874c0-0.484,0.394-0.878,0.877-0.878c0.482,0,0.875,0.394,0.875,0.878C9.126,14.724,8.733,15.116,8.251,15.116z">
-                                </path>
-                                <path
-                                    d="M13.972,12.386c-1.022,0-1.855,0.834-1.855,1.856s0.833,1.853,1.855,1.853s1.854-0.83,1.854-1.853S14.994,12.386,13.972,12.386z M13.972,15.116c-0.484,0-0.878-0.393-0.878-0.874c0-0.484,0.394-0.878,0.878-0.878c0.482,0,0.875,0.394,0.875,0.878C14.847,14.724,14.454,15.116,13.972,15.116z">
-                                </path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <button class="sevenc" id="sevenc">
-            <span>
-                view all
-            </span>
-        </button>
-    </section>
+    <!-- React Dynamic Shopping & Advanced Product Hub Mount Point -->
+    <div id="react-shop-root"></div>
 
 
     <hr>
@@ -874,7 +640,8 @@
 
 
 
-    <!-- <script src="index.js"></script> -->
+    <script type="text/babel" src="app.js"></script>
+    <script src="index1.js"></script>  
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

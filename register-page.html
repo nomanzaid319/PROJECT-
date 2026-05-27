@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="register.css">
     
 </head>
 
@@ -13,14 +13,14 @@
     <section>
         <div class="login-box" id="login-box">
             <form action="">
-                <h2>Login</h2>
+                <h2>Register</h2>
                 <div class="input-box" id="input-box">
                     <span class="icon" id="icon">
                         <!-- <ion-icon name="mail-outline"></ion-icon> -->
                         <ion-icon name="mail"></ion-icon>
                     </span>
                     <input type="text" id="email" required>
-                    <label for="email">Email</label>
+                    <label for="email">Enter your Email for Registration</label>
                 </div>
 
                 <div class="input-box" id="input-box">
@@ -29,15 +29,15 @@
                         <ion-icon name="lock-closed"></ion-icon>
                     </span>
                     <input type="password" id="password" required>
-                    <label for="password">Password</label>
+                    <label for="password">Enter your Password</label>
                 </div>
                 <div class="remember-forgot" id="remember-forgot">
                     <label><input type="checkbox"> Remember me</label>
                     <a href="#">Forgot Password?</a>
                 </div>
-                <button type="submit" onclick="login()" class="login-btn" >Login</button>
+                <button type="submit" onclick="register()">Register</button>
                 <div class="register-link" id="register-link">
-                    <p>Don't have an account? <a href="register-page.html">Register</a></p>
+                    <p>Already have an account? <a href="loginpage.html">Login</a></p>
                 </div>
             </form>
         </div>
